@@ -1,6 +1,6 @@
 # Go ePub Scrapper 📜
 
-#### ➡️ Little **[Perpetualdaydreams's**](https://perpetualdaydreams.com/) Scrapper that transform light novels in `.epub` files
+#### ➡️ Little [_Perpetualdaydreams's_](https://perpetualdaydreams.com/) Scrapper that transform light novels in `.epub` files
 
 ## Purpose:
 
