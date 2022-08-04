@@ -94,7 +94,7 @@ func Scrap(InfoUrl string) (ChaptersList, ePubConfig, bool) {
 }
 
 func NewBrowser() *rod.Browser {
-	return rod.New().MustConnect().MustIncognito().NoDefaultDevice().Timeout(4 * time.Minute)
+	return rod.New().MustConnect().MustIncognito().NoDefaultDevice()
 }
 
 var wg sync.WaitGroup
@@ -105,7 +105,7 @@ func (ch *Chapter) ExtractChInfo(browser *rod.Browser) {
 		return
 	}
 
-	subPage := browser.MustPage(ch.url).Timeout(1 * time.Minute)
+	subPage := browser.MustPage(ch.url)
 	defer subPage.Close() // not important if page don't close
 	subPage.MustWaitLoad()
 
