@@ -76,7 +76,7 @@ func Scrap(InfoUrl string) (ChaptersList, ePubConfig, bool) {
 	}
 
 	// Split the chapters list in 5 because otherwise the browser crash (due to 100+ tabs open at once...)
-	for i, chGroup := range utils.CutArray(chapters, 2) {
+	for i, chGroup := range utils.CutArray(chapters, 5) {
 		log.Printf("--- Part #%d ---", i+1)
 
 		wg.Add(len(chGroup))
